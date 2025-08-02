@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Descobrir Vídeos - VideoFolio Hub</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <meta name="description" content="Descubra os melhores trabalhos de criadores de vídeo brasileiros. Filtre por tipo, estilo, localização e muito mais." />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fvideofolio4069back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background text-text-primary font-source-sans">
+    <!-- Navigation Header -->
+    <header class="bg-primary shadow-subtle sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="homepage.html" class="flex items-center space-x-2">
+                        <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 9.739 9 11 5.16-1.261 9-5.45 9-11V7l-10-5z"/>
+                            <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" fill="none"/>
+                        </svg>
+                        <span class="text-secondary font-inter font-bold text-xl">VideoFolio Hub</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="video_discovery_engine.html" class="text-accent font-semibold">Descobrir</a>
+                        <a href="portfolio_builder_suite.html" class="text-secondary hover:text-accent transition-standard font-semibold">Criar Portfólio</a>
+                        <a href="community_discussion_center.html" class="text-secondary hover:text-accent transition-standard font-semibold">Comunidade</a>
+                        <a href="industry_resource_hub.html" class="text-secondary hover:text-accent transition-standard font-semibold">Recursos</a>
+                        <a href="creator_profile_showcase.html" class="text-secondary hover:text-accent transition-standard font-semibold">Colaborar</a>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="portfolio_builder_suite.html" class="btn-primary">Começar Agora</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-secondary hover:text-accent transition-standard" onclick="toggleMobileMenu()">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-primary border-t border-border">
+                    <a href="video_discovery_engine.html" class="text-accent block px-3 py-2 font-semibold">Descobrir</a>
+                    <a href="portfolio_builder_suite.html" class="text-secondary hover:text-accent block px-3 py-2 transition-standard font-semibold">Criar Portfólio</a>
+                    <a href="community_discussion_center.html" class="text-secondary hover:text-accent block px-3 py-2 transition-standard font-semibold">Comunidade</a>
+                    <a href="industry_resource_hub.html" class="text-secondary hover:text-accent block px-3 py-2 transition-standard font-semibold">Recursos</a>
+                    <a href="creator_profile_showcase.html" class="text-secondary hover:text-accent block px-3 py-2 transition-standard font-semibold">Colaborar</a>
+                    <a href="portfolio_builder_suite.html" class="btn-primary mt-4 block text-center">Começar Agora</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Search Hero Section -->
+    <section class="bg-primary py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h1 class="text-3xl lg:text-4xl font-inter font-bold text-secondary mb-4">
+                    Descubra <span class="text-accent">Trabalhos Incríveis</span>
+                </h1>
+                <p class="text-xl text-secondary opacity-90 max-w-2xl mx-auto">
+                    Explore milhares de vídeos de criadores brasileiros talentosos
+                </p>
+            </div>
+
+            <!-- Advanced Search Bar -->
+            <div class="max-w-4xl mx-auto">
+                <div class="relative">
+                    <input type="text" id="search-input" placeholder="Buscar por 'drone footage Rio de Janeiro', 'animation studio São Paulo'..." class="w-full px-6 py-4 pl-12 pr-16 text-lg bg-secondary rounded-xl border border-border focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent" />
+                    <svg class="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                    </svg>
+                    <button class="absolute right-3 top-1/2 transform -translate-y-1/2 btn-primary px-4 py-2 text-sm">
+                        Buscar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="bg-secondary py-8 border-b border-border sticky top-16 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+                <!-- Filter Buttons -->
+                <div class="flex flex-wrap items-center gap-3">
+                    <!-- Tipo de Projeto -->
+                    <div class="relative">
+                        <button onclick="toggleDropdown('projeto-dropdown')" class="flex items-center space-x-2 px-4 py-2 bg-surface rounded-lg border border-border hover:bg-background transition-standard">
+                            <span class="font-semibold text-text-primary">Tipo de Projeto</span>
+                            <svg class="w-4 h-4 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div id="projeto-dropdown" class="hidden absolute top-full left-0 mt-2 w-48 bg-secondary rounded-lg shadow-gallery border border-border z-50">
+                            <div class="p-2">
+                                <label class="flex items-center space-x-2 p-2 hover:bg-surface rounded cursor-pointer">
+                                    <input type="checkbox" class="text-accent" value="comercial" />
+                                    <span>Comercial</span>
+                                </label>
+                                <label class="flex items-center space-x-2 p-2 hover:bg-surface rounded cursor-pointer">
+                                    <input type="checkbox" class="text-accent" value="institucional" />
+                                    <span>Institucional</span>
+                                </label>
+                                <label class="flex items-center space-x-2 p-2 hover:bg-surface rounded cursor-pointer">
+                                    <input type="checkbox" class="text-accent" value="artistico" />
+                                    <span>Artístico</span>
+                                </label>
+                                <label class="flex items-center space-x-2 p-2 hover:bg-surface rounded cursor-pointer">
+                                    <input type="checkbox" class="text-accent" value="educacional" />
+                                    <span>Educacional</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Estilo Visual -->
+                    <div class="relative">
+                        <button onclick="toggleDropdown('estilo-dropdown')" class="flex items-center space-x-2 px-4 py-2 bg-surface rounded-lg border border-border hover:bg-background transition-standard">
+                            <span class="font-semibold text-text-primary">Estilo Visual</span>
+                            <svg class="w-4 h-4 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div id="estilo-dropdown" class="hidden absolute top-full left-0 mt-2 w-48 bg-secondary rounded-lg shadow-gallery border border-border z-50">
+                            <div class="p-2">
+                                <label class="flex items-center space-x-2 p-2 hover:bg-surface rounded cursor-pointer">
+                                    <input type="checkbox" class="text-accent" value="minimalista" />
+                                    <span>Minimalista</span>
+                                </label>
+                                <label class="flex items-center space-x-2 p-2 hover:bg-surface rounded cursor-pointer">
+                                    <input type="checkbox" class="text-accent" value="cinematografico" />
+                                    <span>Cinematográfico</span>
+                                </label>
+                                <label class="flex items-center space-x-2 p-2 hover:bg-surface rounded cursor-pointer">
+                                    <input type="checkbox" class="text-accent" value="experimental" />
+                                    <span>Experimental</span>
+                                </label>
+                                <label class="flex items-center space-x-2 p-2 hover:bg-surface rounded cursor-pointer">
+                                    <input type="checkbox" class="text-accent" value="corporativo" />
+                                    <span>Corporativo</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Localização -->
+                    <div class="relative">
+                        <button onclick="toggleDropdown('localizacao-dropdown')" class="flex items-center space-x-2 px-4 py-2 bg-surface rounded-lg border border-border hover:bg-background transition-standard">
+                            <span class="font-semibold text-text-primary">Localização</span>
+                            <svg class="w-4 h-4 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div id="localizacao-dropdown" class="hidden absolute top-full left-0 mt-2 w-48 bg-secondary rounded-lg shadow-gallery border border-border z-50">
+                            <div class="p-2">
+                                <label class="flex items-center space-x-2 p-2 hover:bg-surface rounded cursor-pointer">
+                                    <input type="checkbox" class="text-accent" value="sao-paulo" />
+                                    <span>São Paulo</span>
+                                </label>
+                                <label class="flex items-center space-x-2 p-2 hover:bg-surface rounded cursor-pointer">
+                                    <input type="checkbox" class="text-accent" value="rio-janeiro" />
+                                    <span>Rio de Janeiro</span>
+                                </label>
+                                <label class="flex items-center space-x-2 p-2 hover:bg-surface rounded cursor-pointer">
+                                    <input type="checkbox" class="text-accent" value="belo-horizonte" />
+                                    <span>Belo Horizonte</span>
+                                </label>
+                                <label class="flex items-center space-x-2 p-2 hover:bg-surface rounded cursor-pointer">
+                                    <input type="checkbox" class="text-accent" value="brasilia" />
+                                    <span>Brasília</span>
+                                </label>
+                                <label class="flex items-center space-x-2 p-2 hover:bg-surface rounded cursor-pointer">
+                                    <input type="checkbox" class="text-accent" value="salvador" />
+                                    <span>Salvador</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Duração -->
+                    <div class="relative">
+                        <button onclick="toggleDropdown('duracao-dropdown')" class="flex items-center space-x-2 px-4 py-2 bg-surface rounded-lg border border-border hover:bg-background transition-standard">
+                            <span class="font-semibold text-text-primary">Duração</span>
+                            <svg class="w-4 h-4 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div id="duracao-dropdown" class="hidden absolute top-full left-0 mt-2 w-48 bg-secondary rounded-lg shadow-gallery border border-border z-50">
+                            <div class="p-2">
+                                <label class="flex items-center space-x-2 p-2 hover:bg-surface rounded cursor-pointer">
+                                    <input type="checkbox" class="text-accent" value="curto" />
+                                    <span>Até 30s</span>
+                                </label>
+                                <label class="flex items-center space-x-2 p-2 hover:bg-surface rounded cursor-pointer">
+                                    <input type="checkbox" class="text-accent" value="medio" />
+                                    <span>30s - 2min</span>
+                                </label>
+                                <label class="flex items-center space-x-2 p-2 hover:bg-surface rounded cursor-pointer">
+                                    <input type="checkbox" class="text-accent" value="longo" />
+                                    <span>2min - 10min</span>
+                                </label>
+                                <label class="flex items-center space-x-2 p-2 hover:bg-surface rounded cursor-pointer">
+                                    <input type="checkbox" class="text-accent" value="muito-longo" />
+                                    <span>Mais de 10min</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filter Actions -->
+                <div class="flex items-center space-x-3">
+                    <button onclick="clearFilters()" class="text-text-secondary hover:text-accent transition-standard font-semibold">
+                        Limpar Filtros
+                    </button>
+                    <button class="flex items-center space-x-2 text-text-secondary hover:text-accent transition-standard">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                        </svg>
+                        <span class="font-semibold">Favoritos</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Collections -->
+    <section class="bg-background py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-8">
+                <h2 class="text-2xl lg:text-3xl font-inter font-bold text-text-primary mb-4">
+                    Coleções em <span class="text-accent">Destaque</span>
+                </h2>
+                <p class="text-text-secondary">Trabalhos selecionados pela nossa curadoria</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <!-- Collection 1 -->
+                <div class="card overflow-hidden group cursor-pointer hover:shadow-gallery transition-standard" onclick="filterByCollection('publicidade-2024')">
+                    <div class="aspect-video relative">
+                        <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Publicidade Brasileira 2024" class="w-full h-full object-cover group-hover:scale-105 transition-standard" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-60"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <h3 class="text-secondary font-inter font-bold text-lg mb-1">Publicidade Brasileira 2024</h3>
+                            <p class="text-secondary opacity-90 text-sm">147 vídeos • Atualizado hoje</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Collection 2 -->
+                <div class="card overflow-hidden group cursor-pointer hover:shadow-gallery transition-standard" onclick="filterByCollection('documentarios-independentes')">
+                    <div class="aspect-video relative">
+                        <img src="https://images.pixabay.com/photo/2016/02/01/12/33/film-1174973_960_720.jpg" alt="Documentários Independentes" class="w-full h-full object-cover group-hover:scale-105 transition-standard" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-60"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <h3 class="text-secondary font-inter font-bold text-lg mb-1">Documentários Independentes</h3>
+                            <p class="text-secondary opacity-90 text-sm">89 vídeos • Curadoria especial</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Collection 3 -->
+                <div class="card overflow-hidden group cursor-pointer hover:shadow-gallery transition-standard" onclick="filterByCollection('motion-graphics-sp')">
+                    <div class="aspect-video relative">
+                        <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&w=800&q=80" alt="Motion Graphics São Paulo" class="w-full h-full object-cover group-hover:scale-105 transition-standard" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-60"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <h3 class="text-secondary font-inter font-bold text-lg mb-1">Motion Graphics São Paulo</h3>
+                            <p class="text-secondary opacity-90 text-sm">203 vídeos • Trending</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Discovery Grid -->
+    <section class="bg-background pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center mb-8">
+                <div>
+                    <h2 class="text-2xl lg:text-3xl font-inter font-bold text-text-primary mb-2">
+                        Descobrir Vídeos
+                    </h2>
+                    <p class="text-text-secondary">2.847 vídeos encontrados</p>
+                </div>
+                
+                <!-- Sort Options -->
+                <div class="flex items-center space-x-4">
+                    <span class="text-text-secondary font-semibold">Ordenar por:</span>
+                    <select class="px-4 py-2 bg-secondary border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent">
+                        <option value="relevancia">Relevância</option>
+                        <option value="recente">Mais Recente</option>
+                        <option value="popular">Mais Popular</option>
+                        <option value="visualizacoes">Mais Visualizado</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Masonry Grid -->
+            <div id="video-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Video Card 1 -->
+                <div class="video-card group cursor-pointer" onclick="openVideoModal('video1')">
+                    <div class="card overflow-hidden">
+                        <div class="aspect-video relative">
+                            <img src="https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Campanha Institucional Banco do Brasil" class="w-full h-full object-cover group-hover:scale-105 transition-standard" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-0 group-hover:opacity-60 transition-standard"></div>
+                            <div class="absolute top-3 right-3">
+                                <button class="w-8 h-8 bg-secondary bg-opacity-90 rounded-full flex items-center justify-center hover:bg-accent hover:text-white transition-standard">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-standard">
+                                <button class="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto hover:scale-110 transition-standard">
+                                    <svg class="w-5 h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="absolute bottom-3 right-3">
+                                <span class="bg-primary bg-opacity-80 text-secondary text-xs px-2 py-1 rounded">2:34</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-inter font-bold text-text-primary mb-2 line-clamp-2">Campanha Institucional Banco do Brasil</h3>
+                            <div class="flex items-center space-x-2 mb-3">
+                                <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Marina Silva" class="w-6 h-6 rounded-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <span class="text-text-secondary text-sm font-semibold">Marina Silva</span>
+                            </div>
+                            <div class="flex items-center justify-between text-xs text-text-secondary">
+                                <div class="flex items-center space-x-3">
+                                    <span class="flex items-center space-x-1">
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                        </svg>
+                                        <span>12.3k</span>
+                                    </span>
+                                    <span class="flex items-center space-x-1">
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                        </svg>
+                                        <span>847</span>
+                                    </span>
+                                </div>
+                                <span>São Paulo</span>
+                            </div>
+                            <div class="flex flex-wrap gap-1 mt-3">
+                                <span class="bg-surface text-text-secondary text-xs px-2 py-1 rounded">Institucional</span>
+                                <span class="bg-surface text-text-secondary text-xs px-2 py-1 rounded">Cinematográfico</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 2 -->
+                <div class="video-card group cursor-pointer" onclick="openVideoModal('video2')">
+                    <div class="card overflow-hidden">
+                        <div class="aspect-video relative">
+                            <img src="https://images.pixabay.com/photo/2016/11/29/06/15/plans-1867745_960_720.jpg" alt="Motion Graphics para Startup" class="w-full h-full object-cover group-hover:scale-105 transition-standard" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-0 group-hover:opacity-60 transition-standard"></div>
+                            <div class="absolute top-3 right-3">
+                                <button class="w-8 h-8 bg-secondary bg-opacity-90 rounded-full flex items-center justify-center hover:bg-accent hover:text-white transition-standard">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-standard">
+                                <button class="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto hover:scale-110 transition-standard">
+                                    <svg class="w-5 h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="absolute bottom-3 right-3">
+                                <span class="bg-primary bg-opacity-80 text-secondary text-xs px-2 py-1 rounded">1:47</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-inter font-bold text-text-primary mb-2 line-clamp-2">Motion Graphics para Startup</h3>
+                            <div class="flex items-center space-x-2 mb-3">
+                                <img src="https://images.pixabay.com/photo/2016/11/21/12/42/beard-1845166_960_720.jpg" alt="Carlos Mendes" class="w-6 h-6 rounded-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <span class="text-text-secondary text-sm font-semibold">Carlos Mendes</span>
+                            </div>
+                            <div class="flex items-center justify-between text-xs text-text-secondary">
+                                <div class="flex items-center space-x-3">
+                                    <span class="flex items-center space-x-1">
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                        </svg>
+                                        <span>8.9k</span>
+                                    </span>
+                                    <span class="flex items-center space-x-1">
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                        </svg>
+                                        <span>623</span>
+                                    </span>
+                                </div>
+                                <span>São Paulo</span>
+                            </div>
+                            <div class="flex flex-wrap gap-1 mt-3">
+                                <span class="bg-surface text-text-secondary text-xs px-2 py-1 rounded">Comercial</span>
+                                <span class="bg-surface text-text-secondary text-xs px-2 py-1 rounded">Minimalista</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 3 -->
+                <div class="video-card group cursor-pointer" onclick="openVideoModal('video3')">
+                    <div class="card overflow-hidden">
+                        <div class="aspect-video relative">
+                            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=600&q=80" alt="Documentário Amazônia" class="w-full h-full object-cover group-hover:scale-105 transition-standard" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-0 group-hover:opacity-60 transition-standard"></div>
+                            <div class="absolute top-3 right-3">
+                                <button class="w-8 h-8 bg-secondary bg-opacity-90 rounded-full flex items-center justify-center hover:bg-accent hover:text-white transition-standard">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-standard">
+                                <button class="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto hover:scale-110 transition-standard">
+                                    <svg class="w-5 h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="absolute bottom-3 right-3">
+                                <span class="bg-primary bg-opacity-80 text-secondary text-xs px-2 py-1 rounded">15:23</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-inter font-bold text-text-primary mb-2 line-clamp-2">Documentário: Vozes da Amazônia</h3>
+                            <div class="flex items-center space-x-2 mb-3">
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616c6d4e6e8?auto=format&fit=crop&w=100&q=80" alt="Ana Costa" class="w-6 h-6 rounded-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <span class="text-text-secondary text-sm font-semibold">Ana Costa</span>
+                            </div>
+                            <div class="flex items-center justify-between text-xs text-text-secondary">
+                                <div class="flex items-center space-x-3">
+                                    <span class="flex items-center space-x-1">
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                        </svg>
+                                        <span>25.1k</span>
+                                    </span>
+                                    <span class="flex items-center space-x-1">
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                        </svg>
+                                        <span>1.2k</span>
+                                    </span>
+                                </div>
+                                <span>Manaus</span>
+                            </div>
+                            <div class="flex flex-wrap gap-1 mt-3">
+                                <span class="bg-surface text-text-secondary text-xs px-2 py-1 rounded">Artístico</span>
+                                <span class="bg-surface text-text-secondary text-xs px-2 py-1 rounded">Cinematográfico</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 4 -->
+                <div class="video-card group cursor-pointer" onclick="openVideoModal('video4')">
+                    <div class="card overflow-hidden">
+                        <div class="aspect-video relative">
+                            <img src="https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Videoclipe Indie" class="w-full h-full object-cover group-hover:scale-105 transition-standard" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-0 group-hover:opacity-60 transition-standard"></div>
+                            <div class="absolute top-3 right-3">
+                                <button class="w-8 h-8 bg-secondary bg-opacity-90 rounded-full flex items-center justify-center hover:bg-accent hover:text-white transition-standard">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-standard">
+                                <button class="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto hover:scale-110 transition-standard">
+                                    <svg class="w-5 h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="absolute bottom-3 right-3">
+                                <span class="bg-primary bg-opacity-80 text-secondary text-xs px-2 py-1 rounded">3:42</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-inter font-bold text-text-primary mb-2 line-clamp-2">Videoclipe "Noites de Verão"</h3>
+                            <div class="flex items-center space-x-2 mb-3">
+                                <img src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Bruno Oliveira" class="w-6 h-6 rounded-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <span class="text-text-secondary text-sm font-semibold">Bruno Oliveira</span>
+                            </div>
+                            <div class="flex items-center justify-between text-xs text-text-secondary">
+                                <div class="flex items-center space-x-3">
+                                    <span class="flex items-center space-x-1">
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                        </svg>
+                                        <span>15.7k</span>
+                                    </span>
+                                    <span class="flex items-center space-x-1">
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                        </svg>
+                                        <span>934</span>
+                                    </span>
+                                </div>
+                                <span>Rio de Janeiro</span>
+                            </div>
+                            <div class="flex flex-wrap gap-1 mt-3">
+                                <span class="bg-surface text-text-secondary text-xs px-2 py-1 rounded">Artístico</span>
+                                <span class="bg-surface text-text-secondary text-xs px-2 py-1 rounded">Experimental</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 5 -->
+                <div class="video-card group cursor-pointer" onclick="openVideoModal('video5')">
+                    <div class="card overflow-hidden">
+                        <div class="aspect-video relative">
+                            <img src="https://images.pixabay.com/photo/2015/01/08/18/27/startup-593341_960_720.jpg" alt="Vídeo Corporativo Tech" class="w-full h-full object-cover group-hover:scale-105 transition-standard" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-0 group-hover:opacity-60 transition-standard"></div>
+                            <div class="absolute top-3 right-3">
+                                <button class="w-8 h-8 bg-secondary bg-opacity-90 rounded-full flex items-center justify-center hover:bg-accent hover:text-white transition-standard">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-standard">
+                                <button class="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto hover:scale-110 transition-standard">
+                                    <svg class="w-5 h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="absolute bottom-3 right-3">
+                                <span class="bg-primary bg-opacity-80 text-secondary text-xs px-2 py-1 rounded">4:18</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-inter font-bold text-text-primary mb-2 line-clamp-2">Apresentação Corporativa TechBrasil</h3>
+                            <div class="flex items-center space-x-2 mb-3">
+                                <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Fernanda Santos" class="w-6 h-6 rounded-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <span class="text-text-secondary text-sm font-semibold">Fernanda Santos</span>
+                            </div>
+                            <div class="flex items-center justify-between text-xs text-text-secondary">
+                                <div class="flex items-center space-x-3">
+                                    <span class="flex items-center space-x-1">
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                        </svg>
+                                        <span>6.4k</span>
+                                    </span>
+                                    <span class="flex items-center space-x-1">
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                        </svg>
+                                        <span>412</span>
+                                    </span>
+                                </div>
+                                <span>Brasília</span>
+                            </div>
+                            <div class="flex flex-wrap gap-1 mt-3">
+                                <span class="bg-surface text-text-secondary text-xs px-2 py-1 rounded">Corporativo</span>
+                                <span class="bg-surface text-text-secondary text-xs px-2 py-1 rounded">Minimalista</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 6 -->
+                <div class="video-card group cursor-pointer" onclick="openVideoModal('video6')">
+                    <div class="card overflow-hidden">
+                        <div class="aspect-video relative">
+                            <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=600&q=80" alt="Drone Footage Copacabana" class="w-full h-full object-cover group-hover:scale-105 transition-standard" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-0 group-hover:opacity-60 transition-standard"></div>
+                            <div class="absolute top-3 right-3">
+                                <button class="w-8 h-8 bg-secondary bg-opacity-90 rounded-full flex items-center justify-center hover:bg-accent hover:text-white transition-standard">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-standard">
+                                <button class="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto hover:scale-110 transition-standard">
+                                    <svg class="w-5 h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="absolute bottom-3 right-3">
+                                <span class="bg-primary bg-opacity-80 text-secondary text-xs px-2 py-1 rounded">1:23</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-inter font-bold text-text-primary mb-2 line-clamp-2">Drone Footage: Copacabana ao Amanhecer</h3>
+                            <div class="flex items-center space-x-2 mb-3">
+                                <img src="https://images.pixabay.com/photo/2016/11/21/12/42/beard-1845166_960_720.jpg" alt="Roberto Lima" class="w-6 h-6 rounded-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <span class="text-text-secondary text-sm font-semibold">Roberto Lima</span>
+                            </div>
+                            <div class="flex items-center justify-between text-xs text-text-secondary">
+                                <div class="flex items-center space-x-3">
+                                    <span class="flex items-center space-x-1">
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                        </svg>
+                                        <span>31.2k</span>
+                                    </span>
+                                    <span class="flex items-center space-x-1">
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                        </svg>
+                                        <span>1.8k</span>
+                                    </span>
+                                </div>
+                                <span>Rio de Janeiro</span>
+                            </div>
+                            <div class="flex flex-wrap gap-1 mt-3">
+                                <span class="bg-surface text-text-secondary text-xs px-2 py-1 rounded">Artístico</span>
+                                <span class="bg-surface text-text-secondary text-xs px-2 py-1 rounded">Cinematográfico</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-12">
+                <button id="load-more-btn" class="btn-primary px-8 py-3" onclick="loadMoreVideos()">
+                    Carregar Mais Vídeos
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Modal -->
+    <div id="video-modal" class="fixed inset-0 bg-primary bg-opacity-90 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-secondary rounded-xl max-w-4xl w-full max-h-full overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 id="modal-title" class="text-2xl font-inter font-bold text-text-primary">Título do Vídeo</h3>
+                    <button onclick="closeVideoModal()" class="text-text-secondary hover:text-accent transition-standard">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="aspect-video bg-surface rounded-lg mb-6 flex items-center justify-center">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-6 h-6 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                        <p class="text-text-secondary">Player de vídeo será carregado aqui</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="md:col-span-2">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <img id="modal-creator-avatar" src alt class="w-12 h-12 rounded-full object-cover" />
+                            <div>
+                                <h4 id="modal-creator-name" class="font-inter font-bold text-text-primary">Nome do Criador</h4>
+                                <p id="modal-creator-location" class="text-text-secondary text-sm">Localização</p>
+                            </div>
+                            <button class="ml-auto btn-primary">Seguir</button>
+                        </div>
+                        
+                        <p id="modal-description" class="text-text-secondary mb-4">
+                            Descrição do vídeo será exibida aqui com detalhes sobre o projeto, técnicas utilizadas e contexto da produção.
+                        </p>
+
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-surface text-text-secondary text-sm px-3 py-1 rounded-full">Tag 1</span>
+                            <span class="bg-surface text-text-secondary text-sm px-3 py-1 rounded-full">Tag 2</span>
+                        </div>
+
+                        <div class="flex items-center space-x-6 text-text-secondary">
+                            <button class="flex items-center space-x-2 hover:text-accent transition-standard">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                </svg>
+                                <span>Curtir</span>
+                            </button>
+                            <button class="flex items-center space-x-2 hover:text-accent transition-standard">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"/>
+                                </svg>
+                                <span>Compartilhar</span>
+                            </button>
+                            <button class="flex items-center space-x-2 hover:text-accent transition-standard">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
+                                </svg>
+                                <span>Salvar</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h5 class="font-inter font-bold text-text-primary mb-4">Vídeos Relacionados</h5>
+                        <div class="space-y-4">
+                            <div class="flex space-x-3 cursor-pointer hover:bg-surface p-2 rounded-lg transition-standard">
+                                <img src="https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Vídeo relacionado" class="w-16 h-12 object-cover rounded" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <div class="flex-1">
+                                    <h6 class="font-semibold text-text-primary text-sm line-clamp-2">Outro Vídeo Interessante</h6>
+                                    <p class="text-text-secondary text-xs">Marina Silva</p>
+                                    <p class="text-text-secondary text-xs">8.2k visualizações</p>
+                                </div>
+                            </div>
+                            <div class="flex space-x-3 cursor-pointer hover:bg-surface p-2 rounded-lg transition-standard">
+                                <img src="https://images.pixabay.com/photo/2016/11/29/06/15/plans-1867745_960_720.jpg" alt="Vídeo relacionado" class="w-16 h-12 object-cover rounded" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <div class="flex-1">
+                                    <h6 class="font-semibold text-text-primary text-sm line-clamp-2">Motion Graphics Avançado</h6>
+                                    <p class="text-text-secondary text-xs">Carlos Mendes</p>
+                                    <p class="text-text-secondary text-xs">12.5k visualizações</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-surface py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-2">
+                        <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 9.739 9 11 5.16-1.261 9-5.45 9-11V7l-10-5z"/>
+                            <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" fill="none"/>
+                        </svg>
+                        <span class="text-text-primary font-inter font-bold text-xl">VideoFolio Hub</span>
+                    </div>
+                    <p class="text-text-secondary">
+                        A plataforma definitiva para criadores de vídeo brasileiros showcasearem seus trabalhos e conectarem-se com oportunidades.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-standard">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-standard">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-standard">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-standard">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Platform -->
+                <div>
+                    <h3 class="font-inter font-bold text-text-primary mb-4">Plataforma</h3>
+                    <ul class="space-y-2">
+                        <li><a href="video_discovery_engine.html" class="text-text-secondary hover:text-accent transition-standard">Descobrir Trabalhos</a></li>
+                        <li><a href="portfolio_builder_suite.html" class="text-text-secondary hover:text-accent transition-standard">Criar Portfólio</a></li>
+                        <li><a href="community_discussion_center.html" class="text-text-secondary hover:text-accent transition-standard">Comunidade</a></li>
+                        <li><a href="creator_profile_showcase.html" class="text-text-secondary hover:text-accent transition-standard">Colaborações</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h3 class="font-inter font-bold text-text-primary mb-4">Recursos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="industry_resource_hub.html" class="text-text-secondary hover:text-accent transition-standard">Tutoriais</a></li>
+                        <li><a href="industry_resource_hub.html" class="text-text-secondary hover:text-accent transition-standard">Tendências</a></li>
+                        <li><a href="industry_resource_hub.html" class="text-text-secondary hover:text-accent transition-standard">Equipamentos</a></li>
+                        <li><a href="industry_resource_hub.html" class="text-text-secondary hover:text-accent transition-standard">Carreira</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h3 class="font-inter font-bold text-text-primary mb-4">Suporte</h3>
+                    <ul class="space-y-2">
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-standard">Central de Ajuda</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-standard">Contato</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-standard">Privacidade</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-standard">Termos de Uso</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-text-secondary text-sm">
+                    © 2025 VideoFolio Hub. Todos os direitos reservados.
+                </p>
+                <p class="text-text-secondary text-sm mt-4 md:mt-0">
+                    Feito com ❤️ para criadores brasileiros
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Dropdown toggle
+        function toggleDropdown(dropdownId) {
+            const dropdown = document.getElementById(dropdownId);
+            const allDropdowns = document.querySelectorAll('[id$="-dropdown"]');
+            
+            // Close all other dropdowns
+            allDropdowns.forEach(dd => {
+                if (dd.id !== dropdownId) {
+                    dd.classList.add('hidden');
+                }
+            });
+            
+            dropdown.classList.toggle('hidden');
+        }
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', function(event) {
+            const dropdowns = document.querySelectorAll('[id$="-dropdown"]');
+            const buttons = document.querySelectorAll('button[onclick*="toggleDropdown"]');
+            
+            let clickedButton = false;
+            buttons.forEach(button => {
+                if (button.contains(event.target)) {
+                    clickedButton = true;
+                }
+            });
+            
+            if (!clickedButton) {
+                dropdowns.forEach(dropdown => {
+                    if (!dropdown.contains(event.target)) {
+                        dropdown.classList.add('hidden');
+                    }
+                });
+            }
+        });
+
+        // Clear filters
+        function clearFilters() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = false;
+            });
+            
+            // Reset search
+            document.getElementById('search-input').value = '';
+            
+            // Reload videos (simulate)
+            console.log('Filters cleared');
+        }
+
+        // Filter by collection
+        function filterByCollection(collection) {
+            console.log('Filtering by collection:', collection);
+            // Simulate filtering logic
+        }
+
+        // Video modal functions
+        function openVideoModal(videoId) {
+            const modal = document.getElementById('video-modal');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            
+            // Simulate loading video data
+            const videoData = {
+                video1: {
+                    title: 'Campanha Institucional Banco do Brasil',
+                    creator: 'Marina Silva',
+                    location: 'São Paulo',
+                    avatar: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=100'
+                },
+                video2: {
+                    title: 'Motion Graphics para Startup',
+                    creator: 'Carlos Mendes',
+                    location: 'São Paulo',
+                    avatar: 'https://images.pixabay.com/photo/2016/11/21/12/42/beard-1845166_960_720.jpg'
+                },
+                video3: {
+                    title: 'Documentário: Vozes da Amazônia',
+                    creator: 'Ana Costa',
+                    location: 'Manaus',
+                    avatar: 'https://images.unsplash.com/photo-1494790108755-2616c6d4e6e8?auto=format&fit=crop&w=100&q=80'
+                }
+            };
+            
+            const data = videoData[videoId] || videoData.video1;
+            document.getElementById('modal-title').textContent = data.title;
+            document.getElementById('modal-creator-name').textContent = data.creator;
+            document.getElementById('modal-creator-location').textContent = data.location;
+            document.getElementById('modal-creator-avatar').src = data.avatar;
+        }
+
+        function closeVideoModal() {
+            const modal = document.getElementById('video-modal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Load more videos
+        function loadMoreVideos() {
+            const button = document.getElementById('load-more-btn');
+            button.textContent = 'Carregando...';
+            button.disabled = true;
+            
+            // Simulate loading
+            setTimeout(() => {
+                button.textContent = 'Carregar Mais Vídeos';
+                button.disabled = false;
+                console.log('More videos loaded');
+            }, 1500);
+        }
+
+        // Search functionality
+        document.getElementById('search-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                const query = this.value;
+                console.log('Searching for:', query);
+                // Implement search logic
+            }
+        });
+
+        // Infinite scroll simulation
+        let loading = false;
+        window.addEventListener('scroll', function() {
+            if (loading) return;
+            
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 1000) {
+                loading = true;
+                console.log('Loading more content...');
+                
+                setTimeout(() => {
+                    loading = false;
+                    // Add more video cards here
+                }, 1000);
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeVideoModal();
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

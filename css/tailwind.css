@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --color-primary: #0A0A0A; /* Deep creative black, professional foundation */
+  --color-secondary: #F8F8F8; /* Clean canvas white, content backdrop */
+  --color-accent: #FF6B35; /* Energetic creative spark, call-to-action moments */
+  
+  /* Background Colors */
+  --color-background: #FAFAFA; /* Subtle warmth, extended viewing comfort */
+  --color-surface: #EEEEEE; /* Gentle elevation, card and modal backgrounds */
+  
+  /* Text Colors */
+  --color-text-primary: #1A1A1A; /* Strong readability, main content hierarchy */
+  --color-text-secondary: #666666; /* Clear supporting information, metadata display */
+  
+  /* Status Colors */
+  --color-success: #00C851; /* Portfolio completion, positive feedback moments */
+  --color-warning: #FFB347; /* Gentle guidance, incomplete profile alerts */
+  --color-error: #FF4444; /* Helpful problem solving, upload issues */
+  
+  /* Border Colors */
+  --color-border: #E5E5E5; /* Minimal borders for form inputs and data separation */
+  
+  /* Shadow Values */
+  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.1); /* Floating elements like modals */
+  --shadow-gallery: 0 8px 30px rgba(0, 0, 0, 0.15); /* Video thumbnails depth */
+  
+  /* Animation Timing */
+  --transition-fast: 200ms ease-out; /* Video preview responsiveness */
+  --transition-standard: 300ms ease-out; /* Hover states and UI feedback */
+  --transition-page: 400ms ease-out; /* Cinematic page transitions */
+  --transition-loading: 800ms ease-out; /* Portfolio loading sequences */
+}
+
+@layer base {
+  body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-accent text-white font-inter font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply bg-surface text-text-primary font-inter font-semibold px-6 py-3 rounded-lg border border-border transition-all duration-300 hover:bg-secondary;
+  }
+  
+  .card {
+    @apply bg-secondary rounded-lg shadow-subtle transition-all duration-300 hover:shadow-gallery;
+  }
+  
+  .video-thumbnail {
+    @apply rounded-lg shadow-gallery transition-all duration-200 hover:scale-105;
+  }
+  
+  .text-accent-serif {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  .transition-fast {
+    transition-duration: var(--transition-fast);
+  }
+  
+  .transition-standard {
+    transition-duration: var(--transition-standard);
+  }
+  
+  .transition-page {
+    transition-duration: var(--transition-page);
+  }
+  
+  .transition-loading {
+    transition-duration: var(--transition-loading);
+  }
+  
+  .shadow-subtle {
+    box-shadow: var(--shadow-subtle);
+  }
+  
+  .shadow-gallery {
+    box-shadow: var(--shadow-gallery);
+  }
+}
